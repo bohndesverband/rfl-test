@@ -6,6 +6,8 @@ jobs:
   create_release:
     runs-on: ubuntu-latest
     name: create_release
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     outputs:
       releases: ${{ steps.query_releases.outputs.releases }}
     steps:
