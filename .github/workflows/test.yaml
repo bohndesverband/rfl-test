@@ -16,4 +16,4 @@ jobs:
       - name: Create release with gh
         run: gh release create archive-$(date '+%Y-%m-%d') -t archive-$(date '+%Y-%m-%d') -R bohndesverband/test || true
       - id: query_releases
-        run: echo "releases=$(gh release list -R nflverse/nflverse-data --exclude-drafts --json tagName --jq '[.[].tagName]')" > $GITHUB_OUTPUT
+        run: echo "releases=$(gh release list -R bohndesverband/test --exclude-drafts --json tagName --jq '[.[].tagName]')" > $GITHUB_OUTPUT
